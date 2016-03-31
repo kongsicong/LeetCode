@@ -6,7 +6,10 @@ struct ListNode {
 	ListNode(int x) :val(x), next(nullptr) { }
 };
 struct RandomListNode {
-
+	int label;
+	RandomListNode *next, *random;
+	RandomListNode(int x) : label(x), next(nullptr), random(nullptr) {}
+	
 };
 namespace list {
 	class Solution {
@@ -15,12 +18,15 @@ namespace list {
 		order and each of their nodes contain a single digit.Add the two numbers and return it as a linked list.*/
 		ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
 
+		/*Reverse a linked list */
+		ListNode* reverseList(ListNode* head);
+
 		/*Reverse a linked list from position m to n. Do it in-place and in one-pass.*/
 		ListNode* reverseBetween(ListNode* head, int m, int n);
 
 		/*Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater
 		than or equal to x.*/
-		ListNode* partion(ListNode* head, int x);
+		ListNode* partition(ListNode* head, int x);
 
 		/*Given a sorted linked list, delete all duplicates such that each element appear only once.*/
 		ListNode* deleteDuplicates(ListNode* head);
@@ -68,10 +74,15 @@ namespace list {
 		return -1.
 		set(key, value) - Set or insert the value if the key is not already present. When the cache reached its
 		capacity, it should invalidate the least recently used item before inserting a new item.*/
-		class LRUCache{
+		class LRUCache;
 
-		};
-
+	private:
+		ListNode* reverse(ListNode *first, ListNode *end, ListNode *prev);
 	};
+
+
+	ListNode* CreateList(int n);
+	void PrintList(ListNode* head);
+	
 }
 #endif //_SOLUTION_H_
