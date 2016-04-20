@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <vector>
+#include <string>
 using namespace std;
 int main(int argc, char* argv[]) {
 	char option[20];
