@@ -19,6 +19,18 @@ void testArray() {
 			case 3:
 				testFindMedianSortedArrays();
 				break;
+			case 4:
+				testLongestConsecutive();
+				break;
+			case 5:
+				testGetPermutation();
+				break;
+			case 6:
+				testTrap();
+				break;
+			case 7:
+				testClimbStairs();
+				break;
 			default:
 				break;
 		}
@@ -86,4 +98,37 @@ void testFindMedianSortedArrays() {
 	printf("B:\n");
 	PrintArray(B, m);
 	printf("median:\t%lf\n", findMedianSortedArrays(A, n, B, m));
+}
+
+void testLongestConsecutive() {
+	std::vector<int> A;
+	CreateArray(A);
+	printf("A:\n");
+	PrintArray(A);
+	printf("longest consecutive: %d \n", longestConsecutive(A));
+}
+
+void testGetPermutation() {
+	printf("input the value of n (1-9):\n");
+	int n;
+	scanf_s("\n%d", &n);
+	printf("input the kth:\n");
+	int k;
+	scanf("\n%d", &k);
+	printf("%s\n", getPermutation(n, k).c_str());
+}
+
+void testTrap() {
+	std::vector<int> A;
+	CreateArray(A);
+	printf("A:\n");
+	PrintArray(A);
+	printf("trapping rain water: %d \n", trap(A));
+}
+
+void testClimbStairs() {
+	printf("input the number:\n");
+	int n;
+	scanf("\n%d", &n);
+	printf("total numbers of method:\t %d\n", climbStairs(n));
 }

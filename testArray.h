@@ -4,4 +4,8 @@ void testArray();
 void testRemoveDuplicates();
 void testRemoveDuplicatesII();
 void testFindMedianSortedArrays();
+void testLongestConsecutive();
+void testGetPermutation();
+void testTrap();
+void testClimbStairs();
 #endif //_TEST_ARRAY_H_
